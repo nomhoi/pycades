@@ -46,3 +46,9 @@ FROM python:3.8
 ENV PYCADES="pycades_0.1.22769"
 
 COPY --from=build /cprocsp/$PYCADES/pycades.so /usr/local/lib/python3.8/pycades.so
+
+COPY --from=build /opt/cprocsp /opt/cprocsp/
+
+COPY --from=build /var/opt/cprocsp /var/opt/cprocsp/
+
+COPY --from=build /etc/opt/cprocsp /etc/opt/cprocsp/
